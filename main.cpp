@@ -41,7 +41,7 @@ int main() {
         return 1;
     }
 
-    //Fill Stack
+    //Fill Stack, Queue, and Priority Queue
     for (int i = 0; i < 100; i++) {
         Data songData(inFile);
         dataStack.push(songData);
@@ -56,13 +56,13 @@ int main() {
     }
 
     //Print Queue to Output File
-    while(!dataStack.empty()) {
+    while(!dataQueue.empty()) {
         qFile << dataQueue.front();
         dataQueue.pop();
     }
 
     //Print Priority Queue to Output File
-    while(!dataStack.empty()) {
+    while(!dataPriQueue.empty()) {
         sorFile << dataPriQueue.top();
         dataPriQueue.pop();
     }
